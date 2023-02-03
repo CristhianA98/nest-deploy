@@ -12,7 +12,12 @@ async function main() {
     }),
   )
 
-  await app.listen(3000);
+  const port = process.env.PORT || 3000
+
+  await app.listen(port);
+  console.log('====================================');
+  console.log(port);
+  console.log('====================================');
 }
 
 main();
